@@ -3,10 +3,13 @@ name: Fetch Bilibili Videos
 on:
   schedule:
     - cron: "0 */6 * * *"   # 每 6 小时一次（UTC）
-  workflow_dispatch:       # 支持手动触发
+  workflow_dispatch:
 
 permissions:
   contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # ✅ 关键新增这一行
 
 jobs:
   fetch:
@@ -22,12 +25,10 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: |
-          pip install requests
+        run: pip install requests
 
       - name: Fetch latest videos
-        run: |
-          python fetch_videos.py
+        run: python fetch_videos.py
 
       - name: Commit and push changes
         run: |
