@@ -1,4 +1,4 @@
-import { basename } from 'node:path'
+import { basename, resolve } from 'node:path'
 import { defineConfig } from 'vitepress'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
 import { zh_CN } from './configs/zh_CN'
@@ -37,7 +37,7 @@ export default defineConfig({
 
   head,
 
-  lastUpdated: true,
+  lastUpdated: false,
   cleanUrls: true,
 
   // 站点地图
@@ -91,7 +91,7 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [MarkdownPreview()],
+    plugins: [MarkdownPreview({ root: resolve(__dirname, '..') })],
     css: {
       preprocessorOptions: {
         scss: {}
