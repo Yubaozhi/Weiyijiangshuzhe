@@ -31,7 +31,7 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "git fetch --unshallow && vitepress build docs",
+    "docs:build": "git fetch --unshallow 2>/dev/null; vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "prettier": "@femm/prettier",
