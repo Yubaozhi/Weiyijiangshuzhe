@@ -4,7 +4,6 @@ import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
 import MouseClick from "./MouseClick.vue";
 import MouseFollower from "./MouseFollower.vue";
-import DifyChatbot from './DifyChatbot.vue'
 import backtotop from "./backtotop.vue"
 import { usePageId } from '../composables'
 
@@ -67,7 +66,6 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 
     <template #layout-bottom>
       <backtotop />
-      <DifyChatbot />
     </template>
 
     <template #layout-top>

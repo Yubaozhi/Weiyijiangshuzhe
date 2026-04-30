@@ -14,7 +14,7 @@ jobs:
       github.event_name == 'pull_request' &&
       github.event.pull_request.head.repo.full_name == github.repository &&
       github.event.pull_request.user.login != 'claude' &&
-      github.event.pull_request.user.login != 'MCJPG-Agent'
+      github.event.pull_request.user.login != 'site-agent'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -28,8 +28,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "MCJPG-Agent"
-          git config --global user.email "agent@mcjpg.org"
+          git config --global user.name "site-agent"
+          git config --global user.email "agent@example.com"
 
       # ── 等待前置工作流（若已触发）──────────────────────────────────────────
       - name: Wait for "Sync I18n Docs Updates" (if triggered)
@@ -120,7 +120,7 @@ jobs:
       github.event_name == 'pull_request_target' &&
       github.event.pull_request.head.repo.full_name != github.repository &&
       github.event.pull_request.user.login != 'claude' &&
-      github.event.pull_request.user.login != 'MCJPG-Agent'
+      github.event.pull_request.user.login != 'site-agent'
     runs-on: ubuntu-latest
     environment: external-pr-review
     permissions:
@@ -136,8 +136,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "MCJPG-Agent"
-          git config --global user.email "agent@mcjpg.org"
+          git config --global user.name "site-agent"
+          git config --global user.email "agent@example.com"
 
       # ── 等待前置工作流（若已触发）──────────────────────────────────────────
       - name: Wait for "Sync I18n Docs Updates" (if triggered)

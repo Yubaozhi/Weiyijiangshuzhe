@@ -1,8 +1,8 @@
 {
-  "name": "MCJPG",
+  "name": "my-vitepress-site",
   "type": "module",
   "version": "1.0.0",
-  "description": "MCJPG 官网",
+  "description": "我的 VitePress 网站",
   "private": true,
   "devDependencies": {
     "@femm/prettier": "^1.1.0",

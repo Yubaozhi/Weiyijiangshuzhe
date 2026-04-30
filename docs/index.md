@@ -3,28 +3,19 @@ layout: home
 layoutClass: 'm-home-layout'
 
 hero:
-  name: MCJPG
-  text: 服务器交流组织
-  tagline: 一个致力于Minecraft技术交流和服务器宣传的组织<br>无论你是玩家还是服主，这里都是优秀的交流社区
+  name: 网站名称
+  text: 网站标语
+  tagline: 网站简介描述文字
   image:
     src: /logo.png
-    alt: MCJPG组织
+    alt: 网站 Logo
   actions:
-    - text: 加入社区群组
-      link: https://qm.qq.com/q/bAZle5ABzy
-    - theme: sponsor
-      text: 社区MC导航
-      link: /nav/
-    - theme: sponsor
-      text: 组织专栏
+    - theme: brand
+      text: 开始使用
       link: /press/
-    - theme: sponsor
-      text: MCFlare社区
-      link: https://www.mcflare.com
 
 
 ---
-<ServerList />
 
 <style>
 /*爱的魔力转圈圈*/
